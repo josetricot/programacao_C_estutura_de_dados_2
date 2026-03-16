@@ -1,0 +1,21 @@
+Semana 03 - Busca Sequencial x Busca Binária (Conteúdo EAD)
+Condições de conclusão
+Considerando o arquivo DADOS.ZIP, cujo conteúdo está ordenado, altere os códigos de busca sequencial e busca binária para carregar o conteúdo do arquivo ASCII para um vetor. 
+
+Logo após o carregamento, faça a contagem de acessos necessários para localizar os seguintes valores:
+
+ 7341488
+
+ 85
+
+ 265654
+
+732765
+
+8313596
+
+45744
+
+Considerando todos as pesquisas, quantas acessos (no total) cada método de busca teve?
+
+Qual foi o ganho de desempenho do algoritmo mais eficiente em relação ao algoritmo menos eficiente?
