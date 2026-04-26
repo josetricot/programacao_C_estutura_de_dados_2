@@ -1,0 +1,17 @@
+Considerando o treco de programa abaixo, escrito em linguagem C, qual será a saída do programa abaixo:
+
+
+void move(int n, char a, char b, char c){
+ if(n > 0) 
+ {
+ move(n-1,a,c,b);
+ printf("mover de %c para %c\n",a,b);
+ move(n-1,c,b,a);
+ }
+} 
+
+
+main()
+{
+ move(3, 'X','Y','Z');
+}
