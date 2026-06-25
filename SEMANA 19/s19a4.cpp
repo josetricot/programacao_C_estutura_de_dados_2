@@ -13,7 +13,7 @@ Aluno* busca(Hash tab, int mat) {
 como tem só h e não tem h2 é dispersão simples
 nos códigos anteriores...
 
-int hash (int mat) //calcula o indice na tabela{
+int hash (int mat) { //calcula o indice na tabela
 	return (mat%N);
 }
 
