@@ -30,7 +30,7 @@ typedef Inteiro** Hash;
 
 //Inteiro* dados[n]; nao podemos criar um vetor de ponteiros assim pois n é digitado pelo usuario
 //eh preciso usar alocacao dinamica, malloc, vetor de "alguma coisa" e usa ponteiro para essa "alguma coisa", ex int*, float*, Inteiro*
-//primeiro aterisco diz que aponta para um endereco e o segundo que lá tem outro ponteiro
+//primeiro asterisco diz que aponta para um endereco e o segundo que lá tem outro ponteiro
 
 int hash (int numero) { //calcula o indice na tabela
 	return (numero%n);
