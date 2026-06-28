@@ -1,25 +1,25 @@
 /******************************************************************************
 
-Desenvolva um programa em linguagem C que solicite ao usuário a quantidade de
-posições de uma estrutura para armazenar números inteiros dinamicamente na 
-memória.
+Desenvolva um programa em linguagem C que solicite ao usuÃ¡rio a quantidade de
+posiÃ§Ãµes de uma estrutura para armazenar nÃºmeros inteiros dinamicamente na 
+memÃ³ria.
 
-Após a entrada do tamanho da estrutura, o programa deve criar uma rotina para 
-leitura de números inteiros  positivos informados pelo usuário.
+ApÃ³s a entrada do tamanho da estrutura, o programa deve criar uma rotina para 
+leitura de nÃºmeros inteiros  positivos informados pelo usuÃ¡rio.
 
-Para cada número digitado, o programa deve verificar e informar se:
+Para cada nÃºmero digitado, o programa deve verificar e informar se:
 
-o número já existe na estrutura, ou
-o número é inédito (ainda não foi inserido).
-O programa deve continuar permitindo novas inserções até que o usuário decida 
-encerrar a execução, informando -1.
+o nÃºmero jÃ¡ existe na estrutura, ou
+o nÃºmero Ã© inÃ©dito (ainda nÃ£o foi inserido).
+O programa deve continuar permitindo novas inserÃ§Ãµes atÃ© que o usuÃ¡rio decida 
+encerrar a execuÃ§Ã£o, informando -1.
 
 *******************************************************************************/
 #include <stdio.h>
 #include <stdlib.h>
 
 
-int n = 0; //numero de posicaoes
+int n = 0; //numero de posicoes
 
 struct inteiro {
 	int numero;
@@ -28,9 +28,9 @@ typedef struct inteiro Inteiro;
 
 typedef Inteiro** Hash; 
 
-//Inteiro* dados[n]; nao podemos criar um vetor de ponteiros assim pois n é digitado pelo usuario
+//Inteiro* dados[n]; nao podemos criar um vetor de ponteiros assim pois n Ã© digitado pelo usuario
 //eh preciso usar alocacao dinamica, malloc, vetor de "alguma coisa" e usa ponteiro para essa "alguma coisa", ex int*, float*, Inteiro*
-//primeiro aterisco diz que aponta para um endereco e o segundo que lá tem outro ponteiro
+//primeiro aterisco diz que aponta para um endereco e o segundo que lÃ¡ tem outro ponteiro
 
 int hash (int numero) { //calcula o indice na tabela
 	return (numero%n);
