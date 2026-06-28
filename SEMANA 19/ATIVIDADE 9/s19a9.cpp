@@ -17,7 +17,7 @@ Posição | Hash Simples | Acessos | Hash Duplo | Acessos
 //como cada matricula vai ter o seu proprio numero de acessos, tentativas ate achar a vaga
 //o melhor lugar para guardar a informação eh dentro da struct
 
-//nas funcoes de insercao, ciado contador que começa em 1, tentativa inicial
+//nas funcoes de insercao, criado contador que começa em 1, tentativa inicial
 //acada vez que o while roda, ocorre uma colisão, aumenta o contador
 //quando acha a vaga, tab[h] == NULL, salva o numero
 
