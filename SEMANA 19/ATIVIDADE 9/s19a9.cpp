@@ -1,7 +1,7 @@
 /*Usando o programa da Atividade 08, altere para que mostra a quantidade de acessos utolizada para cada registro:
 
 Exemplo:
-Posição | Hash Simples | Acessos | Hash Duplo | Acessos
+PosiÃ§Ã£o | Hash Simples | Acessos | Hash Duplo | Acessos
 -------------------------------------------------------
 1       | 10001        |   1     |            |        
 2       | -            | 1002    |   2        |        
@@ -14,11 +14,11 @@ Posição | Hash Simples | Acessos | Hash Duplo | Acessos
 #include <stdlib.h>
 #include <string.h>
 
-//como cada matricula vai ter o seu proprio número de acessos, tentativas ate achar a vaga
-//o melhor lugar para guardar a informação eh dentro da struct
+//como cada matricula vai ter o seu proprio numero de acessos, tentativas ate achar a vaga
+//o melhor lugar para guardar a informaÃ§Ã£o eh dentro da struct
 
-//nas funcoes de insercao, ciado contador que começa em 1, tentativa inicial
-//acada vez que o while roda, ocorre uma colisão, aumenta o contador
+//nas funcoes de insercao, ciado contador que comeÃ§a em 1, tentativa inicial
+//acada vez que o while roda, ocorre uma colisÃ£o, aumenta o contador
 //quando acha a vaga, tab[h] == NULL, salva o numero
 
 
@@ -70,7 +70,7 @@ Aluno* insere1 (Hash tab, int mat, char* nome)
 		h = (h+1) % N;
 		contAcessos++; //teve colisao, soma um acesso
 	}
-	if (tab[h]==NULL) { /* não encontrou o elemento */
+	if (tab[h]==NULL) { /* nÃ£o encontrou o elemento */
 		tab[h] = (Aluno*) malloc(sizeof(Aluno));
 		tab[h]->mat = mat;
 		tab[h]->acessos = contAcessos; //salva a quantidade de acessos
@@ -106,7 +106,7 @@ Aluno* insere2 (Hash tab, int mat, char* nome)
 		h = (h+h2) % N;
 		contAcessos++; //teve colisao, soma um acesso
 	}
-	if (tab[h]==NULL) { /* não encontrou o elemento */
+	if (tab[h]==NULL) { /* nÃ£o encontrou o elemento */
 		tab[h] = (Aluno*) malloc(sizeof(Aluno));
 		tab[h]->mat = mat;
 		tab[h]->acessos = contAcessos; //salva a quantidade de acessos
