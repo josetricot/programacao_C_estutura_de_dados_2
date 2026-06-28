@@ -1,16 +1,16 @@
 /*Desenvolva um programa em linguagem C que leia dados a partir de um arquivo texto chamado dados_nomes.txt.
 
-Esses valores deverão ser inseridos em uma Tabela de Dispersão (Hash Table) utilizando dois métodos distintos:
+Esses valores deverÃ£o ser inseridos em uma Tabela de DispersÃ£o (Hash Table) utilizando dois mÃ©todos distintos:
 
-Dispersão simples (hashing simples)
-Dispersão dupla (double hashing)
-Ao final da execução, o programa deve gerar uma saída formatada mostrando a ocupação das tabelas, contendo:
+DispersÃ£o simples (hashing simples)
+DispersÃ£o dupla (double hashing)
+Ao final da execuÃ§Ã£o, o programa deve gerar uma saÃ­da formatada mostrando a ocupaÃ§Ã£o das tabelas, contendo:
 
-posição do vetor
-valor armazenado na posição
-indicação de ocupação para cada método
+posiÃ§Ã£o do vetor
+valor armazenado na posiÃ§Ã£o
+indicaÃ§Ã£o de ocupaÃ§Ã£o para cada mÃ©todo
 Exemplo:
-Posição | Hash Simples | Hash Duplo
+PosiÃ§Ã£o | Hash Simples | Hash Duplo
 ------------------------------------
 1       | 10001        | -
 2       | -            | 1002
@@ -71,7 +71,7 @@ Aluno* insere1 (Hash tab, int mat, char* nome)
 			break;
 		h = (h+1) % N;
 	}
-		if (tab[h]==NULL) { /* não encontrou o elemento */
+	if (tab[h]==NULL) { /* nÃ£o encontrou o elemento */
 		tab[h] = (Aluno*) malloc(sizeof(Aluno));
 		tab[h]->mat = mat;
 	}
@@ -104,7 +104,7 @@ Aluno* insere2 (Hash tab, int mat, char* nome)
 			break;
 		h = (h+h2) % N;
 	}
-		if (tab[h]==NULL) { /* não encontrou o elemento */
+	if (tab[h]==NULL) { /* nÃ£o encontrou o elemento */
 		tab[h] = (Aluno*) malloc(sizeof(Aluno));
 		tab[h]->mat = mat;
 	}
