@@ -1,0 +1,31 @@
+RESUMO
+
+1. O Conceito Base
+
+O que é? Uma estrutura que mapeia chaves (ex: matrícula) para índices de um vetor através de uma conta matemática (a Função Hash).
+
+Vantagem: Acesso quase instantâneo. Em vez de percorrer um vetor do 0 ao 100 procurando um número, o cálculo diz exatamente em qual "cadeira" o número está sentado.
+
+2. O Grande Vilão: A Colisão
+
+O que é? Ocorre quando a Função Hash calcula o mesmo índice para duas chaves diferentes. Ex: 10 % 10 = 0 e 20 % 10 = 0. As duas chaves querem sentar na cadeira 0.
+
+Solução: Devemos procurar outra cadeira vazia seguindo uma regra de "saltos" (Sondagem/Dispersão).
+
+3. Dispersão Simples (Linear Probing)
+
+Como funciona? Deu colisão? Dá um passo para o lado (h + 1).
+
+O Problema (Cai muito na prova!): Gera Agrupamento Primário. Os dados começam a formar "bloquinhos" na tabela. Se um bloco ficar grande, qualquer chave nova que cair ali perto vai demorar muitos acessos até achar uma vaga, matando a eficiência do algoritmo.
+
+4. Dispersão Dupla (Double Hashing)
+
+Como funciona? Deu colisão? O tamanho do salto não é fixo (+1), ele é calculado por uma segunda Função Hash (h2).
+
+A Vantagem: Chaves que colidem na primeira tentativa darão saltos de tamanhos diferentes, seguindo caminhos diferentes pela tabela. Isso evita os agrupamentos, espalhando os dados de forma muito mais homogênea.
+
+A Matemática Prática: Como você brilhantemente notou hoje, embora a fórmula teórica fale em multiplicar pela tentativa $i$, no código nós apenas pegamos a posição atual e somamos o h2 novamente dentro do laço while.
+
+5. Condição de Tabela Cheia
+
+Se o número de pulos/tentativas for igual ao tamanho total da tabela (N), significa que você deu a volta no vetor inteiro e voltou para onde começou, sem achar nenhuma cadeira com NULL.
